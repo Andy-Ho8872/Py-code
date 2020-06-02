@@ -44,12 +44,12 @@ def copy_XY():
     pyperclip.copy(cop_x +"\n" + cop_y)
      
 #建立與設定按鈕(Button)。
-generate = tk.Button(text="產生") 
+generate = tk.Button(text="產生")  #產生座標按鈕
 generate.config(background="skyblue") #設定按鈕背景顏色
 generate.config(command=generate_XY ) #設定按鈕功能
 generate.place(relx=0.4, rely=0.9, anchor="center")  #放置(封裝、包裝)按鈕，按鈕才會出現。  放置方法:  1 .pack()   2 .place   3 .grid()
 
-copy = tk.Button(text="複製") #複製座標值
+copy = tk.Button(text="複製") #複製座標按鈕
 copy.config(background="skyblue")
 copy.config(command=copy_XY )
 copy.place(relx=0.6, rely=0.9, anchor="center")
