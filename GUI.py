@@ -27,19 +27,22 @@ win.attributes("-topmost",True)
 img = Image.open("E:\\python-training\\icon\\tomato.png")
 
 #建立按鈕功能
+
 def click_open():
     img.show()  
 
 #建立與設定按鈕(Button)。
 btn01 = tk.Button(text="按鈕1") 
-btn01.config(background="skyblue") #設定按鈕背景顏色
-btn01.config(width=4, height=2) #設定按鈕大小
+#btn01.config(background="skyblue") #設定按鈕背景顏色
+#btn01.config(width=4, height=2) #設定按鈕大小
 btn01.config(command=click_open) #設定按鈕功能
+#btn01.config(Image=img)
 btn01.pack()  #放置(封裝、包裝)按鈕，按鈕才會出現。  放置方法:  1 .pack()   2 .place   3 .grid()
 
 #建立與設定輸入物件(Entry)
 en01 = tk.Entry()
 en01.pack()
+
 #設定與建立標籤(Label)
 lb01 = tk.Label(text="這是標籤")
 lb01.config(background="white")
