@@ -24,7 +24,8 @@ win.attributes("-alpha",0.95) #透明度設定值為 0 ~ 1   0為完全透明，
 win.attributes("-topmost",True)
 
 #建立按鈕圖片
-img = Image.open("E:\\python-training\\icon\\tomato.png")
+img = Image.open("E:\\python-training\\icon\\0.png")
+load_image = ImageTk.PhotoImage(img)  #需先將圖片轉換成 Photoimage
 
 #建立按鈕功能
 
@@ -33,11 +34,10 @@ def click_open():
 
 #建立與設定按鈕(Button)。
 btn01 = tk.Button(text="按鈕1") 
-#btn01.config(background="skyblue") #設定按鈕背景顏色
-#btn01.config(width=4, height=2) #設定按鈕大小
+btn01.config(image=load_image) #修改按鈕樣式
 btn01.config(command=click_open) #設定按鈕功能
-#btn01.config(Image=img)
-btn01.pack()  #放置(封裝、包裝)按鈕，按鈕才會出現。  放置方法:  1 .pack()   2 .place   3 .grid()
+
+btn01.place(relx=0.5, rely=0.5, anchor="center")  #放置(封裝、包裝)按鈕，按鈕才會出現。  放置方法:  1 .pack()   2 .place   3 .grid()
 
 #建立與設定輸入物件(Entry)
 en01 = tk.Entry()
@@ -46,7 +46,8 @@ en01.pack()
 #設定與建立標籤(Label)
 lb01 = tk.Label(text="這是標籤")
 lb01.config(background="white")
-lb01.place(relx=0.5, rely=0.5, anchor="nw") #此為相對定位 rel值在 0~1之間，anchor為錨點
+lb01.place(relx=0.5, rely=0.8, anchor="center") #此為相對定位 rel值在 0~1之間，anchor為錨點
+
 
 #常駐主視窗
 win.mainloop() 
