@@ -24,13 +24,15 @@ win.attributes("-alpha",0.95) #透明度設定值為 0 ~ 1   0為完全透明，
 win.attributes("-topmost",True)
 
 #建立按鈕圖片
-img = Image.open("E:\\python-training\\icon\\0.png")
+img = Image.open("E:\\python-training\\icon\\0.png") #圖片位置
 load_image = ImageTk.PhotoImage(img)  #需先將圖片轉換成 Photoimage
 
-#建立按鈕功能
+show_tomato = Image.open("E:\\python-training\\icon\\tomato.png") 
+load_tomato_img = ImageTk.PhotoImage(show_tomato)
 
+#建立按鈕功能
 def click_open():
-    img.show()  
+    show_tomato.show()  
 
 #建立與設定按鈕(Button)。
 btn01 = tk.Button(text="按鈕1") 
